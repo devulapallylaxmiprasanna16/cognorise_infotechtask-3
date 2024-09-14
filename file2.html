@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Calculator</title>
+    <link rel="stylesheet" href="file2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time Calculator</h1>
+
+        <!-- Display Screen -->
+        <input type="text" id="display" disabled>
+
+        <!-- Current Time -->
+        <div id="currentTime"></div>
+
+        <!-- Buttons for Numbers and Operators -->
+        <div class="calculator">
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="deleteLast()">DEL</button>
+                <button onclick="appendSymbol('/')">/</button>
+                <button onclick="appendSymbol('*')">*</button>
+
+                <button onclick="appendNumber(7)">7</button>
+                <button onclick="appendNumber(8)">8</button>
+                <button onclick="appendNumber(9)">9</button>
+                <button onclick="appendSymbol('-')">-</button>
+
+                <button onclick="appendNumber(4)">4</button>
+                <button onclick="appendNumber(5)">5</button>
+                <button onclick="appendNumber(6)">6</button>
+                <button onclick="appendSymbol('+')">+</button>
+
+                <button onclick="appendNumber(1)">1</button>
+                <button onclick="appendNumber(2)">2</button>
+                <button onclick="appendNumber(3)">3</button>
+                <button onclick="calculate()">=</button>
+
+                <button onclick="appendNumber(0)">0</button>
+                <button onclick="appendSymbol('.')">.</button>
+            </div>
+        </div>
+
+        <!-- History Section -->
+        <div class="history-box">
+            <h2>History</h2>
+            <div id="history"></div>
+            <button onclick="clearHistory()">Clear History</button>
+        </div>
+    </div>
+    
+    <script src="file3.js"></script>
+</body>
+</html>
